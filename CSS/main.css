@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background: black; 
+    color: pink;  
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0;
+    display: flex;
+
+    font-size: 30px;  
+    font-weight: bold;
+} 
+
+
+/* page 1 - 5 annoying button */ 
+
+.annoying1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.annoying1 button {
+    padding: 12px 3%;
+    background-color: palevioletred;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Bondia {
+    text-align: center;
+    font-size: 30px;
+}
+
+#images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#images img {
+    width: 250px; 
+    height: 250px;
+    margin: 20px; 
+}
+
+
+/*memory card game*/ 
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.game1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+*/
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.actions button {
+    padding: 8px 16px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #27ae60;
+    color: white;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 16px;
+  grid-template-columns: repeat(6, 140px);
+  grid-template-rows: repeat(2, calc(140px / 2 * 3));
+
+  
+}
+
+.card {
+  height: calc(140px / 2 * 3);
+  width: 140px;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.front-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .back {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='25' height='25' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M25 30a5 5 0 110-10 5 5 0 010 10zm0-25a5 5 0 110-10 5 5 0 010 10zM0 30a5 5 0 110-10 5 5 0 010 10zM0 5A5 5 0 110-5 5 5 0 010 5zm12.5 12.5a5 5 0 110-10 5 5 0 010 10z'  stroke-width='1' stroke='none' fill='hsla(174, 100%, 29%, 1)'/><path d='M0 15a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm25 0a2.5 2.5 0 110-5 2.5 2.5 0 010 5zM12.5 2.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5zm0 25a2.5 2.5 0 110-5 2.5 2.5 0 010 5z'  stroke-width='1' stroke='none' fill='hsla(187, 100%, 42%, 1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+}
+
+
+
+/*game complete */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+#gameCompleteButton, #nextPageButton {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin: 0 10px; 
+    border-radius: 10px;
+    background-color: pink;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.Contineu {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: pink;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+
+ /* rock paper scissors */ 
+
+.rock {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: palevioletred;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.rock {
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    margin: 15px; 
+    padding: 15px 30px; 
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.cont {
+    background-color: palevioletred;
+    color: white;
+    padding: 15x 20px;
+    font-size: 20px;
+}
+
+
+
+/*timeline*/ 
+
+.time {
+background: black;
+display: inline;
+padding-bottom: 10cm;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.year {
+position: relative;
+font-size: 16px;
+}
+
+.box {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.box:nth-child(1){
+    animation-delay: 0s; 
+}
+.box:nth-child(2){
+    animation-delay: 1s; 
+}
+.box:nth-child(3){
+    animation-delay: 2s; 
+}
+.box:nth-child(4){
+    animation-delay: 3s; 
+}
+.box:nth-child(5){
+    animation-delay: 4s; 
+}
+.box:nth-child(6){
+    animation-delay: 5s; 
+}
+
+
+
+.text-box {
+    padding: 20px 30px;
+    background-color: pink;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.left-box {
+    left: 0;
+}
+
+.right-box {
+    left: 50%;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: palevioletred;
+    top: 0;
+    left: 50%;
+    margin-left: -3px; 
+    z-index: -1;
+    animation: moveline 6s linear forwards;
+}
+
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.text-box h2{
+    font-weight: bold;
+    text-align: left;
+    font-size: 22px;
+    color: black;
+}
+
+
+.text-box {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: palevioletred;
+    font-size: 18px;
+}
+
+.left-box-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid pink;
+    right: -15px;
+}
+
+.right-box-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid pink;
+    left: -15px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    padding-top: 65px;
+    font-weight: bold;
+}
+
+.header h1 {
+    color: pink;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+.next {
+    color: white;
+    padding: 25px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    animation-delay: 7s;
+    animation: appear 7s linear forwards;
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.nextbtn {
+    padding-bottom: 5cm;
+    padding-top: 2cm;
+}
+
+/* gallery */
+
+.background{
+    background: lightpink;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 46px;
+    padding: 16px;
+    margin: auto;
+    max-width: 800px;
+    padding-top: 85px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(0);
+}
+
+.gallery img:hover {
+    transform: scale(1.6);
+    filter: brightness(1);
+}
+
+.texty {
+    padding-top: 75px;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.texty h1{
+    font-size: 30px;
+}
+
+
+/* calculator */
+
+.calcy {
+    display: inline;
+    background-color: black;
+}
+
+.headery {
+    padding-top: 45px;
+    text-align: center;
+}
+
+
+.calcycalcy{
+    padding-top: 55px;
+}
+
+  table { 
+    border: 3px solid darkblue; 
+    margin-left: auto; 
+    margin-right: auto; 
+} 
+
+input[type="button"] { 
+    width: 100%; 
+    padding: 20px 40px; 
+    background-color: lightblue; 
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+} 
+
+input[type="text"] { 
+    padding: 20px 30px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+    border: 4px solid darkblue; 
+} 
+
+.headeryy {
+    padding-top: 45px;
+    text-align: center;
+    color: white;
+}
+
+.headeryy h1 {
+    font-size: 30px;
+}
+
+.headeryy p {
+    font-size: 26px;
+}
+
+.nexty {
+    color: black;
+    padding: 25px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+}
+
+.nextbtny {
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.calcyy {
+    display: inline;
+    background-color: white;
+}
+
+
+
+/*quote generator*/
+
+.gen {
+    background-image: url('/Images/aesthetic-beach-laptop-nxxp8pvf8vuu72xo.jpeg');
+    display: block;
+    padding-top: 2cm;
+}
+
+.generator {
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.namey {
+    padding-bottom: 25px;
+    color: black;
+}
+
+#quote {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    color: palevioletred;
+}
+
+#new-quote {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: pink;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+#new-quote:hover {
+    background-color: palevioletred;
+}
+
+
+/* quiz*/ 
+
+
+
+/*runaway button*/ 
+
+
+.wahhh {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.button-containery {
+    display: inline-block;
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+    margin-top: 10cm;
+}
+
+.button-containery button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+
+.run-away {
+    animation: moveButton 2s linear forwards; 
+}
+
+@keyframes moveButton {
+    0% {
+        transform: translate(0, 0); 
+    }
+    50% {
+        transform: translate(200px, 200px); 
+    }
+    100% {
+        transform: translate(100vw, 100vh); 
+    }
+}
+
+.pass{
+    display: block;
+}
+
+.pass-texty {
+    margin-top: 40px;
+}
+
+
+/* celebration */ 
+
+.yay {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    background-image: url('/Images/minions-celebrating.webp'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.song-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.song {
+    max-width: 300px; 
+    width: 100%;
+} 
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+/* Confetti effect styles */
+
+
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    background-image: url('/Images/pngimg.com\ -\ confetti_PNG87045.png');
+    background-repeat: repeat;
+    animation: confetti-fall 3s linear infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
